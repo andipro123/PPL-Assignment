@@ -4,8 +4,6 @@ sidetwo = []
 present = True
 
 
-
-
 def valid_check(side):
     if ('grass' in side) and ('goat' in side):
         return False
@@ -13,9 +11,6 @@ def valid_check(side):
         return False
     else:
         return True
-
-
-
 
 
 count = 0

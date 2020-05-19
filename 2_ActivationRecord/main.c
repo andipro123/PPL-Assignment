@@ -8,13 +8,17 @@ int shell_run(){
     return 1;
 }
 
+int function1(){
+    printf("Hey");
+    return 0;
+}
+
 int main(){
     char buffer[2];
     printf("Hello, enter your name: ");
     gets(buffer);
-    if(strlen(buffer) < 0){
+    if(function1())
 	    shell_run();
-    }
     printf("Hello, %s\n", buffer);
     return 0;
 }
