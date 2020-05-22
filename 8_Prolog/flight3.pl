@@ -51,12 +51,9 @@ preferred(A,B,C) :- isCheap(A,B,C) ; C = aircanada.
 un_ac(A,B) :-  (flight(A, united, B, Price, Duration) ;  flight(B, united, A, Price, Duration)) ->  
     (flight(A, aircanada, B, Price2, Duration2) ;  flight(B, aircanada, A, Price2, Duration2)).
 
-/*function to print all files in database*/
+/*function to print all flights in database*/
 
-printFlights(City1, City2) :- (flight(City1, Airline, City2, Price, Duration);
-	flight(City1, Airline, City2, Price, Duration)),
-	(printFlight(City1, Airline, City2, Price, Duration),
-	printFlight(City2, Airline, City1, Price, Duration)).
+printall(A, B) :- printFlight(A,C,B,D,E).
 
 /*function to print a flight from A to B*/
 printFlight(City1, Airline, City2, Price, Duration):-

@@ -19,6 +19,7 @@ void *cal_sec() {
 		fflush(stdout);
 		sec++;
 	}
+
 }
 
 void *cal_min() {	
